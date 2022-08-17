@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="script.js"></script>
+
+    <title>Quiz Game</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <header class="app__header"><h1>Quizzie.</h1></header>
+      <main class="app__main">
+        <section class="setting">
+          <h2 class="setting__heading">Set up your game:</h2>
+
+          <div class="setting__category">
+            <ul class="categories">
+              <li class="category" data-category-id="9">
+                <input
+                  type="radio"
+                  name="category"
+                  value="general"
+                  id="general"
+                />
+                <label for="general"
+                  ><img src="images/general.png" alt="thinking" />
+                  <h3>General</h3></label
+                >
+              </li>
+              <li class="category" data-category-id="12">
+                <input type="radio" name="category" value="music" id="music" />
+                <label for="music"
+                  ><img
+                    src="images/music.png"
+                    alt="listening to music and dancing"
+                  />
+                  <h3>Music</h3></label
+                >
+              </li>
+              <li class="category" data-category-id="14">
+                <input
+                  type="radio"
+                  name="category"
+                  value="television"
+                  id="television"
+                />
+                <label for="television">
+                  <img src="images/television.png" alt="watching tv" />
+                  <h3>Television</h3></label
+                >
+              </li>
+              <li class="category" data-category-id="27">
+                <input
+                  type="radio"
+                  name="category"
+                  value="animals"
+                  id="animals"
+                />
+                <label for="animals">
+                  <img
+                    src="images/animals.png"
+                    alt="three animals on top of each other"
+                  />
+                  <h3>Animals</h3></label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="setting__difficulty">
+            <ul class="difficulties">
+              <li class="difficulty">
+                <input type="radio" name="difficulty" id="easy" value="easy" />
+                <label for="easy">Easy</label>
+              </li>
+              <li class="difficulty">
+                <input
+                  type="radio"
+                  name="difficulty"
+                  id="medium"
+                  value="medium"
+                />
+                <label for="medium">Medium</label>
+              </li>
+              <li class="difficulty">
+                <input type="radio" name="difficulty" id="hard" value="hard" />
+                <label for="hard">Hard</label>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-start">Let's go!</button>
+        </section>
+
+        <section class="quiz">
+          <header class="quiz__header">
+            <p class="question-count">
+              Question <span class="current">1</span> /
+              <span class="total">10</span>
+            </p>
+          </header>
+          <div class="quiz__main">
+            <p class="question"></p>
+            <ul class="answers">
+              <li class="answer">
+                <label for="a1"></label>
+                <input type="radio" name="answer" id="a1" />
+              </li>
+              <li class="answer">
+                <label for="a2"> </label>
+                <input type="radio" name="answer" id="a2" />
+              </li>
+              <li class="answer">
+                <label for="a3"> </label>
+                <input type="radio" name="answer" id="a3" />
+              </li>
+              <li class="answer">
+                <label for="a4"></label>
+                <input type="radio" name="answer" id="a4" />
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn--next">Next</button>
+        </section>
+
+        <section class="end">
+          <p class="message"></p>
+          <button class="btn btn-retry">Play again?</button>
+        </section>
+      </main>
+    </div>
+  </body>
+
+  <!-- Illustration by <a href="https://icons8.com/illustrations/author/RogqKjMRAQ79">Polina Orlova</a> from <a href="https://icons8.com/illustrations">Ouch!</a> -->
+</html>
