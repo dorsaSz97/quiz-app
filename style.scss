@@ -64,12 +64,12 @@ select {
 // ////////////////////////////////////////////////////////////////////////////////////
 
 :root {
-  --color-accent-light: #d78532;
   --color-light-1: #f7f7f7;
   --color-light-2: #fff;
-  --color-dark: #2d2d2d;
   --color-bg: #f7decb67;
 }
+
+$color-accent-light: #d78532;
 
 body {
   display: flex;
@@ -86,13 +86,13 @@ body {
   margin-inline: auto;
   padding: rem(13) rem(26);
   color: var(--color-light-1);
-  background-color: var(--color-accent-light);
+  background-color: $color-accent-light;
   cursor: pointer;
   transition: all 0.5s;
 
   &:hover {
     background-color: #dc7711;
-    box-shadow: 0 0 25px rgba(var(--color-accent-light), 0.49);
+    box-shadow: 0 0 25px rgba($color-accent-light, 0.49);
   }
 }
 
@@ -102,15 +102,15 @@ input[type='radio'] {
   width: rem(20);
   height: rem(20);
   border-radius: 50%;
-  border: 1px solid rgba(var(--color-dark), 0.329);
+  border: 1px solid rgba(#2d2d2d, 0.329);
   background: var(--color-light-2);
   cursor: pointer;
   transition: all 0.3s;
 
   &:checked {
-    background-color: rgba(var(--color-accent-light), 0.49);
+    background-color: rgba($color-accent-light, 0.49);
     border: rem(2) solid var(--color-light-1);
-    box-shadow: 0 0 5px rgba(var(--color-accent-light), 0.49);
+    box-shadow: 0 0 5px rgba($color-accent-light, 0.49);
   }
 }
 
@@ -122,7 +122,7 @@ input[type='radio'] {
   max-width: 450px;
   height: 94vh;
   border-radius: rem(30);
-  border: rem(2) solid rgba(var(--color-accent-light), 0.443);
+  border: rem(2) solid rgba($color-accent-light, 0.443);
   box-shadow: 0 0 rem(40) rgba(0, 0, 0, 0.2);
   background-color: var(--white);
 
@@ -132,7 +132,7 @@ input[type='radio'] {
 
   &__header {
     padding-block: rem(10);
-    border-bottom: 4px dotted rgba(var(--color-accent-light), 0.329);
+    border-bottom: 4px dotted rgba($color-accent-light, 0.329);
 
     h1 {
       text-align: center;
@@ -197,7 +197,7 @@ input[type='radio'] {
           visibility: hidden;
 
           &:checked + label {
-            box-shadow: 0 0 10px rgba(var(--color-accent-light), 0.443);
+            box-shadow: 0 0 10px rgba($color-accent-light, 0.443);
             background-color: var(--color-light-2);
           }
         }
@@ -264,7 +264,7 @@ input[type='radio'] {
         justify-content: space-between;
         padding-inline: rem(15);
         border-radius: rem(1000);
-        border: rem(1) solid rgba(var(--color-accent-light), 0.514);
+        border: rem(1) solid rgba($color-accent-light, 0.514);
 
         label {
           flex: 1;

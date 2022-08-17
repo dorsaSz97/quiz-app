@@ -112,8 +112,10 @@ class Quiz {
   }
 
   _endQuiz() {
+    this.#endingContainer.classList.remove('hide');
     this.#endingContainer.classList.add('show');
-    this.#quizContainer.style.display = 'none';
+    this.#quizContainer.classList.add('hide');
+    this.#quizContainer.classList.remove('show');
     const score = this._calculateCorrectAnswers();
     this.ending = new End(score);
   }
@@ -203,8 +205,10 @@ class Setting {
   }
 
   _toggleDisplay() {
-    this.#settingContainer.style.display = 'none';
-    this.#quizContainer.style.display = 'flex';
+    this.#settingContainer.classList.remove('show');
+    this.#settingContainer.classList.add('hide');
+    this.#quizContainer.classList.add('show');
+    this.#quizContainer.classList.remove('hide');
   }
 }
 
