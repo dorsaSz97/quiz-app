@@ -2,12 +2,6 @@
 
 This is a quiz app with 4 categories that gets the questions from an API, coded with JavaScript (OOP).
 
-You can sign in using:
-
-username: dsz
-
-password: 1111
-
 ## Screenshot
 
 <img src="src/assets/images/sc.png" width="100%" height="100%"/>
